@@ -4,6 +4,7 @@
 html{
     background: radial-gradient(circle at 30% 100%,#008df1 30%,#082772 70% );
     height: 100%;
+    overflow: hidden;
 }
 body{
     overflow: hidden;
