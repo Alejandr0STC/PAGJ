@@ -1,6 +1,10 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
+.verboYou{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
 html{
     background: radial-gradient(circle at 30% 100%,#008df1 30%,#082772 70% );
     height: 100%;
@@ -39,6 +43,18 @@ body{
     font-size: 14pt;
     font-weight: bold;
     color: white;
+   
+}
+/* .parrafoT{
+    border-right: 4px solid ;
+    animation: typing 25s steps(62), blink .5s infinite step-end alternate;
+    overflow: hidden;
+} */
+@keyframes typing{
+    from{ width: 0; }
+}
+@keyframes blink{
+    50%{ border-color: transparent; }
 }
 .palabras{
     width: 340px;
@@ -466,13 +482,3 @@ body{
     rotate: 165deg;
     z-index: -1;
 }
-
-
-
-
-
-
-
-
-
-  
