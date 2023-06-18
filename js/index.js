@@ -4,11 +4,6 @@ function insertPetalos(){
     for (let i = 0; i < 48; i++) {
         girasol.innerHTML += '<div class="petalo"> <div class="petalo-curvo"></div> </div>'
     }
-    // girasol.innerHTML += `
-    // <div class="centro" style="left: 165.2px;">
-    // <div class="centroText">Tú</div>
-    // </div>
-    // `
      girasol.innerHTML += `
     <div class="centro" style="left: 165.2px;">
     <div class="centroText">
@@ -131,3 +126,8 @@ window.addEventListener('load', function() {
     document.getElementById("music1").volume = 0.5
     document.getElementById("music1").play()
 });
+
+addEventListener('click', function(value){
+    console.log(value.target.classList.value)
+    if(value.target.classList.value === "centroText"){ window.location.href = "./html/Tarjetas.html"};
+})

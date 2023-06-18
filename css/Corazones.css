@@ -1,0 +1,89 @@
+@keyframes corazones-fall {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+@keyframes corazones-shake {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(80px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.corazones {
+    position: fixed;
+    z-index: 1;
+    top: -10%;
+    animation-name: corazones-fall,corazones-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite,infinite;
+    animation-play-state: running,running;
+}
+.corazones:nth-of-type(0){
+    left: 1%;
+    animation-delay: 0s, 0s;
+}
+.corazones:nth-of-type(1){
+    left: 10%;
+    -webkit-animation-delay:1s,1s ;
+    animation-delay: 1s, 1s;
+}
+.corazones:nth-of-type(2){
+    left: 20%;
+    -webkit-animation-delay:6s,0.5s ;
+    animation-delay: 6s, 0.5s;
+}
+.corazones:nth-of-type(3){
+    left: 30%;
+    -webkit-animation-delay:4s,2s ;
+    animation-delay: 4s, 2s;
+}
+.corazones:nth-of-type(4){
+    left: 40%;
+    -webkit-animation-delay:5s,3s ;
+    animation-delay: 5s, 3s;
+}
+.corazones:nth-of-type(5){
+    left: 50%;
+    -webkit-animation-delay:2s,4s ;
+    animation-delay: 2s, 4s;
+}
+.corazones:nth-of-type(6){
+    left: 60%;
+    -webkit-animation-delay:3s,5s ;
+    animation-delay: 3s, 5s;
+}
+.corazones:nth-of-type(7){
+    left: 70%;
+    -webkit-animation-delay:1s,6s ;
+    animation-delay: 1s, 6s;
+}
+.corazones:nth-of-type(8){
+    left: 80%;
+    -webkit-animation-delay:0s,7s ;
+    animation-delay: 0s, 7s;
+}
+.corazones:nth-of-type(9){
+    left: 90%;
+    -webkit-animation-delay:7s,8s ;
+    animation-delay: 7s, 8s;
+}
+.Escrito1{
+    z-index: 2;
+    position: absolute;
+    border: 1px solid;
+    background-color: aliceblue;
+    margin: 10% 30% 0px 30%;
+    padding: 2%;
+    border-radius: 5px;
+    font-family: cursive;
+}
