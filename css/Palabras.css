@@ -41,6 +41,12 @@ html{
   position: fixed;
   width: 100%;
 }
+@media (max-width: 768px){
+  html{
+    background: radial-gradient(circle at 0% 100%, #061c22 4%, #000000 96%);
+  }
+}
+
 html,
 body {
   position: relative;

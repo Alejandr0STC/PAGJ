@@ -153,12 +153,9 @@ addEventListener('click', function(value){
 function llevarTarjetas(){
     let nombre = document.getElementById("inputNombre").value 
     
-    if(nombre.toLowerCase() == 'jenifer'){
+    if(nombre.toLowerCase().trim() == 'jenifer'){
         var overlay = document.getElementById("Oscurecer");
 
-        
-
-    
         setTimeout(function () {
             overlay.style.backgroundColor = "rgb(0 0 0)";
         }, 10);
