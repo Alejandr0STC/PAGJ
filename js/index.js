@@ -123,11 +123,65 @@ const typed = new Typed('.typed', {
 	contentType: 'html', // 'html' o 'null' para texto sin formato
 });
 window.addEventListener('load', function() {
-    document.getElementById("music1").volume = 0.5
+    document.getElementById("music1").volume = 0
+    // while(document.getElementById("music1").volume < 0.5){
+    //     setTimeout(() => {
+    //         document.getElementById("music1").volume += 0.05
+    //     }, 10);
+    // }
     document.getElementById("music1").play()
 });
 
 addEventListener('click', function(value){
-    console.log(value.target.classList.value)
-    if(value.target.classList.value === "centroText"){ window.location.href = "./html/Tarjetas.html"};
+   
+    let id;
+    if(value.target.classList.value.length > 0){
+        id = value.target.classList.value
+    }else{
+        id = value.target.id
+    }
+
+    switch (id) {
+        case "centroText": openModal(); break;
+
+        case "btnModal": llevarTarjetas(); break;
+
+        default:
+            break;
+    }
 })
+function llevarTarjetas(){
+    let nombre = document.getElementById("inputNombre").value 
+    
+    if(nombre.toLowerCase() == 'jenifer'){
+        var overlay = document.getElementById("Oscurecer");
+
+        
+
+    
+        setTimeout(function () {
+            overlay.style.backgroundColor = "rgb(0 0 0)";
+        }, 10);
+        const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
+        final.then(function () {
+            window.location.href = "./html/Tarjetas.html"
+        });
+    }else{
+        alert("Obvio nooooooo ><")
+    }
+}
+function openModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+  }
+  
+  // Función para cerrar el modal
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+  var overlay = document.getElementById("Oscurecer");
+        
+        setTimeout(function () {
+            overlay.style.backgroundColor = "rgb(0 0 0 / 0%)";
+        }, 10);

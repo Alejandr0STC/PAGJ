@@ -11,6 +11,23 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../css/Corazones.css'>
 </head>
 <body>
+    <div class="luna" style="
+        position: absolute;
+        right: 20px;
+        top: 23px;
+    ">
+        <div class="circle" style="
+        position: absolute;
+        background-color: black;
+        right: 24px;
+        top: 15px;
+    "></div>
+        <div class="circle" style="
+        background-color: white;
+    "></div>
+    </div>
+    <div id="Oscurecer" ></div>
+    <audio id="music1" src="../mp3/rises the moon.mp3" controls autoplay loop style="display: none;" ></audio>
     <div class="corazon                                                                                                                                                                                                                                                                                                                                                             ">
         <div class="corazones">❤️</div>
         <div class="corazones">❤️</div>                                                                                                                                                                                                 
@@ -37,5 +54,19 @@
       </swiper-container>
       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
   
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById("music1").volume = 0.5
+            document.getElementById("music1").play()
+        });
+        var overlay = document.getElementById("Oscurecer");
+        
+        setTimeout(function () {
+            overlay.style.backgroundColor = "rgb(0 0 0 / 0%)";
+        }, 10);
+        // setTimeout(function () {
+        //     overlay.style.display = "none";
+        // }, 1280);
+    </script>
 </body>
 </html>
