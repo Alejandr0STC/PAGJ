@@ -145,20 +145,31 @@ addEventListener('click', function(value){
         case "centroText": openModal(); break;
 
         case "btnModal": llevarTarjetas(); break;
-
+        case "estrellas": llevarATI(); break;
         default:
             break;
     }
 })
+function fnOscurecer(){
+    var overlay = document.getElementById("Oscurecer");
+
+    setTimeout(function () {
+        overlay.style.backgroundColor = "rgb(0 0 0)";
+    }, 10);
+}
+function llevarATI(){
+   
+        fnOscurecer()
+        const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
+        final.then(function () {
+            window.location.href = "./html/ATI.html"
+        });
+}
 function llevarTarjetas(){
     let nombre = document.getElementById("inputNombre").value 
     
     if(nombre.toLowerCase().trim() == 'jenifer'){
-        var overlay = document.getElementById("Oscurecer");
-
-        setTimeout(function () {
-            overlay.style.backgroundColor = "rgb(0 0 0)";
-        }, 10);
+        fnOscurecer()
         const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
         final.then(function () {
             window.location.href = "./html/Tarjetas.html"
