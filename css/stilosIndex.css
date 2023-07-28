@@ -38,7 +38,23 @@ body {
     transition: .3s;
     display: none;
 }
-
+.borbuja2 {
+    border-radius: 10px 10px 10px 0px;
+    background-color: white;
+    color: black;
+    padding: 0px 5px;
+    border: 1px solid red;
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    top: -46px;
+    font-size: 10pt;
+    width: 65px;
+    left: 30px;
+}
+#imgoso:hover .borbuja2{
+    opacity: 1;
+}
 .activa {
     opacity: 1;
 }
@@ -346,7 +362,15 @@ body {
         transform: skew(20deg) rotate(44deg);
     }
 }
-
+.divoso{
+    top: 0;
+    left: -36px;
+    position: absolute;
+    rotate: 90deg;
+}
+.divoso img{
+    width: 50px;
+}
 .centro {
     width: 90px;
     height: 90px;

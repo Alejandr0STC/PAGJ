@@ -143,13 +143,24 @@ addEventListener('click', function(value){
 
     switch (id) {
         case "centroText": openModal(); break;
-
         case "btnModal": llevarTarjetas(); break;
         case "estrellas": llevarATI(); break;
+        case "imgoso": llevarOso(); break;
         default:
             break;
     }
 })
+addEventListener("mouseover", (event) => {
+    
+    
+    if(event.target.id == "imgoso"){
+        
+        document.getElementsByClassName("borbuja2")[0].style.opacity = "1";
+    }else{
+        
+        document.getElementsByClassName("borbuja2")[0].style.opacity = "0";
+    }
+});
 function fnOscurecer(){
     var overlay = document.getElementById("Oscurecer");
 
@@ -165,6 +176,34 @@ function llevarATI(){
             window.location.href = "./html/ATI.html"
         });
 }
+function llevarOso(){
+   if(new Date() >= new Date("08/04/2023"))
+   {
+    fnOscurecer()
+    const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
+    final.then(function () {
+        window.location.href = "./html/Oso.html"
+    });
+   }
+   else
+   {
+    return
+   }
+    
+}
+function textoOso(){
+    let texto = document.getElementById("textodeloso");
+    if(new Date() >= new Date("08/04/2023"))
+    {
+        texto.textContent = "Ya ❤️"
+        document.getElementsByClassName("borbuja2")[0].style.width = "40px"
+    }
+    else
+    {
+        texto.textContent = "Aun no ❤️"
+    }
+}
+textoOso();
 function llevarTarjetas(){
     let nombre = document.getElementById("inputNombre").value 
     
