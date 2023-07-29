@@ -177,18 +177,18 @@ function llevarATI(){
         });
 }
 function llevarOso(){
-   if(new Date() >= new Date("08/04/2023"))
-   {
+//    if(new Date() >= new Date("08/04/2023"))
+//    {
     fnOscurecer()
     const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
     final.then(function () {
         window.location.href = "./html/Oso.html"
     });
-   }
-   else
-   {
-    return
-   }
+//    }
+//    else
+//    {
+//     return
+//    }
     
 }
 function textoOso(){
