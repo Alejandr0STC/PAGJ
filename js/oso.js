@@ -37,7 +37,7 @@ function cerrarModales()
     modalHeart.style.opacity = "0";
     setTimeout(function () {
         modalHeart.style.display = "none";
-    }, 10);
+    }, 3000);
 }
 function mentiris(){
     document.getElementById("music1").volume = 0.5
