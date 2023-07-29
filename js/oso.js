@@ -36,8 +36,7 @@ function cerrarModales()
     let modalHeart = document.getElementById("corazondeletras");
     modalHeart.style.opacity = "0";
     setTimeout(function () {
-        
-    modalHeart.style.display = "block";
+        modalHeart.style.display = "none";
     }, 10);
 }
 function mentiris(){
