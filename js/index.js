@@ -193,15 +193,15 @@ function llevarOso(){
 }
 function textoOso(){
     let texto = document.getElementById("textodeloso");
-    if(new Date() >= new Date("08/04/2023"))
-    {
+    // if(new Date() >= new Date("08/04/2023"))
+    // {
         texto.textContent = "Ya ❤️"
         document.getElementsByClassName("borbuja2")[0].style.width = "40px"
-    }
-    else
-    {
-        texto.textContent = "Aun no ❤️"
-    }
+    // }
+    // else
+    // {
+    //     texto.textContent = "Aun no ❤️"
+    // }
 }
 textoOso();
 function llevarTarjetas(){
