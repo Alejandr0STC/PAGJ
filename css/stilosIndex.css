@@ -69,7 +69,9 @@ body {
     color: white;
 
 }
-
+.typed{
+    pointer-events: none;
+}
 /* .parrafoT{
     border-right: 4px solid ;
     animation: typing 25s steps(62), blink .5s infinite step-end alternate;
@@ -100,6 +102,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 0px;
+    pointer-events: none;
 }
 
 .pasto {
@@ -279,8 +282,17 @@ body {
     flex-direction: column;
     display: flex;
     align-items: center;
+    position: relative;
 }
-
+#cruzCerrar{
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+#cruzCerrar img{
+    width: 1.25rem;
+    pointer-events: none;
+}
 .modal {
     display: none;
     /* Ocultar el modal de forma predeterminada */

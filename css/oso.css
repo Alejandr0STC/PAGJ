@@ -60,6 +60,7 @@ html{
     color: white;
     overflow-wrap: break-word;
     font-weight: bold;
+    pointer-events: none;
 }
 .textoOSO:hover{
     cursor: pointer;

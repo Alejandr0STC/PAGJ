@@ -1,3 +1,4 @@
+const pantalla = window.screen.width
 
 function insertPetalos(){
     let girasol = document.getElementsByClassName('girasol')[0];
@@ -20,11 +21,12 @@ function insertPasto(){
     let pasto = document.getElementById('jardin');
     let indiceTmp = 0;
     let altura = 9;
-    for (let i = 0; i < 196; i++) {
+    let pastoTotal =  Math.round(Math.round(pantalla) /14);
+    for (let i = 0; i < (pastoTotal * 2.1); i++) {
         pasto.innerHTML += '<div class="pasto"></div>'
         let rotacionPasto = Math.floor(Math.random() * 65);
         let modifiPasto = Math.floor(Math.random() * (45 - 25 + 1) + 25);
-        if(i <= 96){
+        if(i <= pastoTotal){
             if (indiceTmp == 0) {
                 document.getElementsByClassName('pasto')[i].style.left =   -14 + "px";
             }else if( indiceTmp == 1){
@@ -37,7 +39,7 @@ function insertPasto(){
             document.getElementsByClassName('pasto')[i].style.zIndex =   -1 ;
             if (i == 97) {
                 document.getElementsByClassName('pasto')[i].style.left =   (-14)-altura + "px";
-            }else if( i == 1){
+            }else if( i == 98){
                 document.getElementsByClassName('pasto')[i].style.left =   0-altura + "px";
             }else {
                 document.getElementsByClassName('pasto')[i].style.left =  (14 * (indiceTmp -1))-altura + "px";
@@ -62,7 +64,7 @@ function insertPasto(){
         document.getElementsByClassName('pasto')[i].style.animationDirection = "alternate";
         document.getElementsByClassName('pasto')[i].style.animationIterationCount = "infinite"; 
         indiceTmp ++ ;
-        if(i == 96){indiceTmp = 0}
+        if(i == pastoTotal){indiceTmp = 0}
     }
     
 }
@@ -122,7 +124,7 @@ const typed = new Typed('.typed', {
 	cursorChar: '|', // Caracter para el cursor
 	contentType: 'html', // 'html' o 'null' para texto sin formato
 });
-window.addEventListener('load', function() {
+window.addEventListener('click', function() {
     document.getElementById("music1").volume = 0
     // while(document.getElementById("music1").volume < 0.5){
     //     setTimeout(() => {
@@ -142,10 +144,13 @@ addEventListener('click', function(value){
     }
 
     switch (id) {
-        case "centroText": openModal(); break;
-        case "btnModal": llevarTarjetas(); break;
-        case "estrellas": llevarATI(); break;
-        case "imgoso": llevarOso(); break;
+        case "centroText"   : openModal()       ; break;
+        case "cruzCerrar"   : cerrarModal()     ; break;
+        case "centradoModal": cerrarModal()     ; break;
+        case "btnModal"     : llevarTarjetas()  ; break;
+        case "estrellas"    : llevarATI()       ; break;
+        case "imgoso"       : llevarOso()       ; break;
+        
         default:
             break;
     }
@@ -220,8 +225,11 @@ function llevarTarjetas(){
 function openModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
-  }
-  
+}
+function cerrarModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
   // Función para cerrar el modal
   function closeModal() {
     var modal = document.getElementById("myModal");
