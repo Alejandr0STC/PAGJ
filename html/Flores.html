@@ -27,8 +27,8 @@
         function updateImagePosition(event) {
             count++;
             
-            const mouseX = event.clientX;
-            const mouseY = event.clientY;
+            const mouseX = event.clientX - 150;
+            const mouseY = event.clientY - 150;
 
             let multiplo4 =  count % 4 === 0;
             if (multiplo4)
