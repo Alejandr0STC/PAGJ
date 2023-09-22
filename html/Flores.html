@@ -18,7 +18,7 @@
 <body>
 
     <h1 style="text-align: center; color: black; margin-top: 20rem;">Tomas Todas las Flores Amarillas :3</h1>
-    <h1 style="text-align: center; color: black;">Mueve ese Mouse o deja precionada la pantalla 🌼</h1>
+    <h1 style="text-align: center; color: black;">Mueve ese Mouse 🌼</h1>
     <script>
         let count = 0;
 
@@ -51,13 +51,14 @@
         // Evento para comenzar a mover la imagen al tocarla
         document.addEventListener('touchstart', (e) => {
             isDragging = true;
-            // e.preventDefault(); // Evita el desplazamiento predeterminado de la página
+             e.preventDefault(); // Evita el desplazamiento predeterminado de la página
         });
 
         // Evento para mover la imagen al deslizar el dedo
         document.addEventListener('touchmove', (e) => {
+            // isDragging = true;
             count++;
-            if (isDragging) {
+            // if (isDragging) {
                 const touch = e.touches[0];
                 const mouseX  = touch.clientX - 150;// :- imagen.width / 2 + 'px';
                 const mouseY = touch.clientY - 150;//- imagen.height / 2 + 'px';
@@ -69,8 +70,9 @@
                     let imagen = document.getElementById("flor" + count);
                     imagen.style.left = mouseX + 'px';
                     imagen.style.top = mouseY + 'px';
+                    isDragging = false;
                 }
-            }
+            // }
         });
 
         // Evento para detener el movimiento al soltar el dedo
