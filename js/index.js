@@ -150,6 +150,7 @@ addEventListener('click', function(value){
         case "btnModal"     : llevarTarjetas()  ; break;
         case "estrellas"    : llevarATI()       ; break;
         case "imgoso"       : llevarOso()       ; break;
+        case "floresAma"    : llevarPagina("./html/Flores.html")       ; break;
         
         default:
             break;
@@ -172,6 +173,14 @@ function fnOscurecer(){
     setTimeout(function () {
         overlay.style.backgroundColor = "rgb(0 0 0)";
     }, 10);
+}
+function llevarPagina(pagina){
+   
+    fnOscurecer()
+    const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
+    final.then(function () {
+        window.location.href = pagina
+    });
 }
 function llevarATI(){
    
