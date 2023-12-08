@@ -158,6 +158,7 @@ body {
     align-items: center;
     bottom: 0;
     position: absolute;
+    pointer-events: none;
 }
 
 #line {
@@ -271,7 +272,13 @@ body {
     align-items: center;
     display: flex;
 }
-
+.CartaAbsoluta{
+    width: 98px;
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
+    rotate: 30deg;
+}
 .contenatModal {
     width: 380px;
     padding: 15px;

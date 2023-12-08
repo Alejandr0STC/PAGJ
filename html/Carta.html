@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Y yo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='../css/ATI.css'>
+    <link rel="shortcut icon" href="../img/ico/heart.ico" />
+    <style rel='stylesheet'>
+        #Oscurecer{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0);
+    z-index: 2;
+    pointer-events: none;
+    transition: background-color 3s ease;
+    text-align: center;
+  }
+    </style>
+</head>
+<body>
+    <div id="Oscurecer" ></div>
+    <audio id="music1" src="../mp3/QKThr.mp3" controls   style="display: none;" ></audio>
+    <div style="color: white;font-family: cursive;    margin: 5%;">
+        <p>Para: Jenifer</p>
+        <p >
+            Te escribo esta carta sin ideas claras, tal vez alguna vez me dijiste que querias mi respuesta rapida y eso lo puedo hacer es simple, te extraño hoy y lo hare mañana,no es dificil saber eso, tampoco lo iba a ser, 
+            pasaran los dias en los cuales no te hable, pasaran los meses pero siempre habra un vacio si te vas, es innegable que aunque a primera instancia trate de ver a otro lado con afan de no prestar atencion al problema, es que... es 
+            no se como afrontarlos, hoy fue un problema, tal mas mañana sera otro, la vida esta llenos de estos y yo estare siempre dispuestos a mirar de lado
+            esto nisiquiera me acuerdo ahora, creo que soy bueno para algo en la vida y es que a olvidar me llena de alegria, hoy lo se , lo se porque nisiquiera necesito recordarlo
+             se que los dias pasaran, y aun asi mirame aca, dandote una ultima parte de mi maximo ser , je, no te parece raro ? yo no dejare de creer en ti, alguna vez me dijiste que si alguien te escribia algo mal de mi primero me preguntarias
+             fue bonito eso, hoy te escuchare , hoy te creo como lo hare mañana pero recuerda esto por mi "no por que olvide a la ligera no a de hacerme daño", hoy me hize daño, me lastime pero solo quiero que recuerdes lo que te dije, no te vayas y me dejes herido
+             quedate a mi ladito que es cuando mas te necesito.
+            </p>
+            <p>
+                Mi respuesta corta al final del dia es que no quiero que te vayas , quiero envejecer alguien en mi mente y es que encontre una persona bonita una con un corazon bonito, alguien que quiero tratar con cuidado pero ya queda en ti creer en mi la palabra como yo hago a la hora de 
+                     creer en la tuya, mientras tanto dele pancha :c, por el momento seguire como todos los dias a tu lado, amandote y tal vez una ultima palabra para ti y siempre para ti, sera un <strong>TE AMO</strong>, no llores porque tu ojitos no merecen tal maltrato.
+                
+            </p>
+            <p>Siempre tuyo Alejandro</p>
+    </div>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script> -->
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById("music1").volume = 0.5
+            document.getElementById("music1").play()
+        });
+        var overlay = document.getElementById("Oscurecer");
+        
+        setTimeout(function () {
+            overlay.style.backgroundColor = "rgb(0 0 0 / 0%)";
+        }, 10);
+        // setTimeout(function () {
+        //     overlay.style.display = "none";
+        // }, 1280);
+    </script>
+</body>
+</html>

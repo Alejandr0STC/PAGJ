@@ -151,7 +151,7 @@ addEventListener('click', function(value){
         case "estrellas"    : llevarATI()       ; break;
         case "imgoso"       : llevarOso()       ; break;
         case "floresAma"    : llevarPagina("./html/Flores.html")       ; break;
-        
+        case "CartaAbsoluta": llevarCarta()     ; break;
         default:
             break;
     }
@@ -173,6 +173,14 @@ function fnOscurecer(){
     setTimeout(function () {
         overlay.style.backgroundColor = "rgb(0 0 0)";
     }, 10);
+}
+function llevarCarta(){
+   
+    fnOscurecer()
+    const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
+    final.then(function () {
+        window.location.href = "./html/Carta.html";
+    });
 }
 function llevarPagina(pagina){
    
