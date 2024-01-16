@@ -124,15 +124,15 @@ const typed = new Typed('.typed', {
 	cursorChar: '|', // Caracter para el cursor
 	contentType: 'html', // 'html' o 'null' para texto sin formato
 });
-window.addEventListener('click', function() {
-    document.getElementById("music1").volume = 0
-    // while(document.getElementById("music1").volume < 0.5){
-    //     setTimeout(() => {
-    //         document.getElementById("music1").volume += 0.05
-    //     }, 10);
-    // }
-    document.getElementById("music1").play()
-});
+// window.addEventListener('click', function() {
+//     document.getElementById("music1").volume = 0
+//     // while(document.getElementById("music1").volume < 0.5){
+//     //     setTimeout(() => {
+//     //         document.getElementById("music1").volume += 0.05
+//     //     }, 10);
+//     // }
+//     document.getElementById("music1").play()
+// });
 
 addEventListener('click', function(value){
    
