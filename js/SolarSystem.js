@@ -2,7 +2,7 @@
 
 let tierra =  document.getElementsByClassName("tierra2")[0];
 let count = 0;
-
+let planetaTierra = document.getElementsByClassName("tierra3")[0];
 
 tierra.addEventListener('animationiteration', () => {
     console.log('Se completó una iteración de la animación.');
@@ -14,6 +14,14 @@ tierra.addEventListener('animationiteration', () => {
     {
         tierra.style.zIndex = "-1";
         count = 0;
+    }
+    if(tierra.style.zIndex == -1)
+    {
+        planetaTierra.style.width = "2em"; 
+        planetaTierra.style.height = "2em"; 
+    }else{
+        planetaTierra.style.width = "3em"; 
+        planetaTierra.style.height = "3em"; 
     }
 });
 window.addEventListener('load', function() {

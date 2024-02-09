@@ -45,18 +45,23 @@ html{
 .tierra2{
     content: "";
     position: absolute;
-    border-radius: 50%;
     z-index: -1;
-    box-shadow:0px 0px 15px 1px aqua;
 }
 .tierra2{
-    background-color: aqua;
     width: 3em;
     height: 3em;
     top: 7.8em;
     right: 2.8em;
     animation: cara 10s  ease-in-out infinite alternate;
     z-index: -1;
+}
+.tierra3{
+    background-color: aqua;
+    width: 3em;
+    height: 3em;
+    box-shadow:0px 0px 15px 1px aqua;
+    border-radius: 50%;
+    transition: 5s;
 }
 @keyframes orbita {
     
