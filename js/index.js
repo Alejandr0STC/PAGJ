@@ -179,7 +179,7 @@ function llevarCarta(){
     fnOscurecer()
     const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
     final.then(function () {
-        window.location.href = "./html/Carta.html";
+        window.location.href = "./html/SS.html";
     });
 }
 function llevarPagina(pagina){
