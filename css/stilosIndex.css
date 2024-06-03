@@ -184,6 +184,7 @@ body {
     height: 100%;
     align-items: center;
     color: white;
+    pointer-events: none;
 }
 
 .girasol {
@@ -409,6 +410,7 @@ body {
     position: absolute;
     top: 59px;
     z-index: 2;
+    pointer-events: stroke;
 }
 
 .petalo:nth-child(1) {

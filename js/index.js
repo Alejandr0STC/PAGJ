@@ -124,16 +124,13 @@ const typed = new Typed('.typed', {
 	cursorChar: '|', // Caracter para el cursor
 	contentType: 'html', // 'html' o 'null' para texto sin formato
 });
-// window.addEventListener('click', function() {
-//     document.getElementById("music1").volume = 0
-//     // while(document.getElementById("music1").volume < 0.5){
-//     //     setTimeout(() => {
-//     //         document.getElementById("music1").volume += 0.05
-//     //     }, 10);
-//     // }
-//     document.getElementById("music1").play()
-// });
 
+     document.getElementById("music1").volume = 0.02
+    // while(document.getElementById("music1").volume < 0.5){
+    //     setTimeout(() => {
+    //         document.getElementById("music1").volume += 0.05
+    //     }, 10);
+    // }
 addEventListener('click', function(value){
    
     let id;
@@ -144,7 +141,7 @@ addEventListener('click', function(value){
     }
 
     switch (id) {
-        case "centroText"   : openModal()       ; break;
+        case "centro"       : openModal()       ; break;
         case "cruzCerrar"   : cerrarModal()     ; break;
         case "centradoModal": cerrarModal()     ; break;
         case "btnModal"     : llevarTarjetas()  ; break;
