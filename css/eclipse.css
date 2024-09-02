@@ -1,5 +1,6 @@
 * {
     font-family: cursive;
+    pointer-events: none;
 }
 .eclipse {
     position: absolute;
@@ -40,7 +41,6 @@ html{
     /* left: 5em; */
     top: 1em;
     width: 50em;
-
 }
 .tierra2{
     content: "";
@@ -62,6 +62,7 @@ html{
     box-shadow:0px 0px 15px 1px aqua;
     border-radius: 50%;
     transition: 5s;
+    pointer-events: stroke;
 }
 @keyframes orbita {
     

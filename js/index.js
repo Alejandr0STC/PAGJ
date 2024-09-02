@@ -174,7 +174,20 @@ function fnOscurecer(){
 function llevarCarta(){
    
     fnOscurecer()
-    const final = new Promise(function (resolve) {overlay.addEventListener("transitionend", function () {resolve();}, { once: true }); });
+    const final = new Promise(
+        function (resolve) 
+        {
+            overlay.addEventListener("transitionend", 
+                function () 
+                {
+                    resolve();
+                }, 
+                { 
+                    once: true 
+                }
+            ); 
+        }
+    );
     final.then(function () {
         window.location.href = "./html/SS.html";
     });
